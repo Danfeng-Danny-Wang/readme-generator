@@ -1,10 +1,8 @@
-// TODO: Include packages needed for this application
 import inquirer from "inquirer";
 import { existsSync, unlinkSync, writeFileSync } from "fs";
 import { join } from "path";
 import generateMarkdown from "./utils/generateMarkdown.js";
 
-// TODO: Create an array of questions for user input
 const questions = [
   {
     type: "input",
@@ -63,12 +61,10 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   return writeFileSync(join(process.cwd(), "outputs", fileName), data);
 }
 
-// TODO: Create a function to initialize app
 function init() {
   try {
     if (existsSync(join(process.cwd(), "outputs/README.md"))) {
@@ -85,5 +81,4 @@ function init() {
   });
 }
 
-// Function call to initialize app
 init();

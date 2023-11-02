@@ -3,7 +3,7 @@
 
 ## Description
 
-This app can generate a README file for its user
+This app can generate a README file for its user.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ This app can generate a README file for its user
 
 Run the following command to install:
 
-Just git clone
+Just git clone the project folder.
 
 ## Usage
 
@@ -26,7 +26,7 @@ node index.js
 
 ## Credits
 
-Nope
+My friend John :)
 
 ## License
 
@@ -36,7 +36,7 @@ This project is licensed under the MIT license.
 
 Run the following command to run tests:
 
-npm test
+There are no tests for this project yet.
 
 ## Questions
 
