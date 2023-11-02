@@ -1,8 +1,9 @@
-# Testing3
+# README Generator
+![MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-Testing v3
+This app can generate a README file for its user
 
 ## Table of Contents
 
@@ -17,17 +18,19 @@ Testing v3
 
 Run the following command to install:
 
-npm i npm start
+Just git clone
 
 ## Usage
 
-any
+node index.js
 
 ## Credits
 
-john
+Nope
 
 ## License
+
+This project is licensed under the MIT license.
 
 ## Tests
 
@@ -39,5 +42,5 @@ npm test
 
 You can contact me via email: dannywang@utexas.edu
 
-More of my work: [Danfeng-Danny-Wang](https://github.com/undefined/)
+More of my work: [Danfeng-Danny-Wang](https://github.com/Danfeng-Danny-Wang/)
 

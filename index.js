@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
-import { writeFileSync } from "fs";
+import { existsSync, unlinkSync, writeFileSync } from "fs";
 import { join } from "path";
 import generateMarkdown from "./utils/generateMarkdown.js";
 
@@ -39,10 +39,9 @@ const questions = [
       "MIT",
       "ISC",
       "GPLv3",
-      "LGPLv3",
-      "APACHE 2.0",
-      "MPL 2.0",
-      "BSD 3",
+      "Apache_2.0",
+      "MPL_2.0",
+      "BSD_3--Clause",
       "None",
     ],
   },
@@ -71,6 +70,15 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+  try {
+    if (existsSync(join(process.cwd(), "outputs/README.md"))) {
+      unlinkSync(join(process.cwd(), "outputs/README.md"));
+      console.log("Old README.md deleted. Now ready to generate a new one!");
+    }
+  } catch (err) {
+    console.log(err);
+  }
+
   inquirer.prompt(questions).then((res) => {
     console.log("Information received -> Generating README.md now......");
     writeToFile("README.md", generateMarkdown({ ...res }));
